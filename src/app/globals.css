@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC; /* Clean Slate Background */
+  --foreground: #0F172A; /* Deep Navy text */
+  --primary: #414BEA;    /* Bluestock Primary Blue */
+  --secondary: #7752FE;  /* Bluestock Purple */
+  --accent: #F05537;     /* Bluestock Orange/Red */
+  --deep: #190482;       /* Bluestock Deep Blue */
+  --light-blue: #E2E8F0; /* Clean light gray/blue for borders */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-deep: var(--deep);
+  --color-light-blue: var(--light-blue);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input {
+  user-select: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light-blue);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
